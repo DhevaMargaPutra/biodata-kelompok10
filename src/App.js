@@ -1,23 +1,25 @@
-import logo from "./logo.svg";
+import photo from "./dummy.jpg";
 import "./App.css";
+import Carousel from "react-bootstrap/Carousel";
+import Card from "react-bootstrap/Card";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Probe
-        </a>
-      </header>
+      <Carousel>
+        <Carousel.Item>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" src={photo} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Carousel.Item>
+      </Carousel>
     </div>
   );
 }
